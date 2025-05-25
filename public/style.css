@@ -1,0 +1,145 @@
+/* Cabeçalho */
+header nav img {
+    width: 350px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+/* Títulos */
+.destaque {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Caixa de pesquisa */
+input {
+    text-align: center;
+}
+
+.caixa-pesquisa {
+    padding: 20px;
+}
+
+.caixa-pesquisa input {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.caixa-pesquisa button {
+    background: 0;
+    color: darkgray;
+    border: 0;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.caixa-pesquisa button:hover {
+    background-color: black;
+}
+
+/* Categorias */
+.categorias {
+    justify-items: left;
+}
+
+/* Parte de aside */
+aside {
+    display: flexbox;
+}
+
+/* Rodapé */
+.info-container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.linha {
+    height: 2px;
+    background: #333;
+    margin-bottom: 15px;
+}
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sobre,
+.autoria {
+    flex: 1;
+    min-width: 300px;
+}
+
+.placeholder {
+    height: 10px;
+    background: #ccc;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.dados {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.redes-sociais a {
+    margin-right: 7px;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.redes-sociais a:hover {
+    color: black;
+}
+
+span {
+    padding: 10px;
+}
+
+/* Todos os Itens */
+nav div div {
+    padding: 20px;
+    color: white;
+}
+
+nav div div p {
+    width: 70%;
+}
+
+/* Parte do JavaScript */
+#tela {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+#tela a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+#tela a:hover {
+    color: darkgrey;
+}
+
+#tela img {
+    height: 50%;
+    width: 40%;
+}

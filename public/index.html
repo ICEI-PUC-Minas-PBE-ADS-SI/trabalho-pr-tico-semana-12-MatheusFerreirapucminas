@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH Movies</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Desing da Página - Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Parte de Grid - Bootstrap -->
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+    <!-- Ícones do Rodapé -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Ícones das Redes Sociais -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script src="app.js"></script>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid">
+                <img class="logo" src="images/logo.png">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Filmes
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="comedia.html">Comédia</a></li>
+                                <li><a class="dropdown-item" href="acao.html">Ação</a></li>
+                                <li><a class="dropdown-item" href="terror.html">Terror</a></li>
+                                <li><a class="dropdown-item" href="documentarios.html">Documentários</a></li>
+                                <li><a class="dropdown-item" href="series.html">Séries</a></li>
+                                <li><a class="dropdown-item" href="romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="infantil.html">Infantil</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="caixa-pesquisa">
+                    <input type="text" placeholder="Buscar Filmes...">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo do Site -->
+
+    <!-- Itens em Destaque -->
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide text-center">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                </div>
+                <div class="carousel-inner">
+                    <h3 class="destaque">FILMES/SÉRIES EM DESTAQUE</h3>
+                    <div class="carousel-item active">
+                        <img src="images/comedia.jpg" data-id="1" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/acao.jpg" data-id="2" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/terror.png" data-id="3" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/documentario.jpg" data-id="4" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/series.jpg" data-id="5" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/romance.jpg" data-id="6" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/infantil.png" data-id="7" class="d-block mx-auto"
+                            style="width: 60%; display: block; margin: 0 auto;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="fa fa-chevron-left text-white fs-1"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="fa fa-chevron-right text-white fs-1"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Todos os Itens -->
+        <nav class="navbar-dark bg-black">
+            <br>
+            <h3 class="destaque">MAIS OPÇÕES...</h3>
+            <div class="row text-center">
+                
+
+                <!-- Comédia -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/comedia.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="1">
+                    <center>
+                        <br>
+                        <p><b>OS FAROFEIROS 2 (2024)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2comedia.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="8">
+                    <center>
+                        <br>
+                        <p><b>GENTE GRANDE (2010)</b></p>
+                    </center>
+                </div>
+
+
+                <!-- Ação -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/acao.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="2">
+                    <center>
+                        <br>
+                        <p><b>VINGADORES ULTIMATO (2019)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2acao.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="9">
+                    <center>
+                        <br>
+                        <p><b>VELOCIDADE MÁXIMA (1994)</b></p>
+                    </center>
+                </div>
+
+
+                <!-- Terror -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/terror.png" width="100%" height="77%" class="d-block mx-auto" data-id="3">
+                    <center>
+                        <br>
+                        <p><b>IT: A COISA (2017)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2terror.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="10">
+                    <center>
+                        <br>
+                        <p><b>INVOCAÇÃO DO MAL (2013)</b></p>
+                    </center>
+                </div>
+
+
+                <!-- Documentário -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/documentario.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="4">
+                    <center>
+                        <br>
+                        <p><b>SENNA (2024)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2documentario.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="11">
+                    <center>
+                        <br>
+                        <p><b>O DILEMA DAS REDES (2020)</b></p>
+                    </center>
+                </div>
+
+
+                <!-- Série -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/series.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="5">
+                    <center>
+                        <br>
+                        <p><b>COBRA KAI (2019)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2series.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="12">
+                    <center>
+                        <br>
+                        <p><b>LA CASA DE PAPEL (2017)</b></p>
+                    </center>
+                </div>
+
+
+                <!-- Romance -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/romance.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="6">
+                    <center>
+                        <br>
+                        <p><b>SIMPLESMENTE ACONTECE (2019)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2romance.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="13">
+                    <center>
+                        <br>
+                        <p><b>DIÁRIO DE UMA PAIXÃO (2004)</b></p>
+                    </center>
+                </div>
+
+
+                <!-- Infantil -->
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/infantil.png" width="100%" height="77%" class="d-block mx-auto" data-id="7">
+                    <center>
+                        <br>
+                        <p><b>CARROS (2019)</b></p>
+                    </center>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="images/2infantil.jpg" width="100%" height="77%" class="d-block mx-auto" data-id="14">
+                    <center>
+                        <br>
+                        <p><b>SHREK (2001)</b></p>
+                    </center>
+                </div>
+            </div>
+            </div>
+        </nav>
+
+        <!-- Barra de Categorias -->
+        <nav>
+            <div class="navbar navbar-dark bg-black">
+                <ul class="categorias">
+                    <h4 class="text-white">VEJA TAMBÉM...</h4>
+                    <li><a class="navbar-brand" href="curiosidades.html">Curiosidades</a></li>
+                    <li><a class="navbar-brand" href="oscar.html">Oscar</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Rodapé -->
+        <footer>
+            <section class="info-container">
+                <h2>Informações do Aluno</h2>
+                <div class="linha"></div>
+
+                <div class="info-content">
+                    <div class="sobre">
+                        <h4>Sobre</h4>
+                        <p>Sou estudante do 1º período da Pontifícia Universidade Católica de Minas Gerais - Campus
+                            Betim, tenho 18 anos, sou nascido em Belo Horizonte-MG e criado em Betim-MG.</p>
+                    </div>
+
+                    <div class="autoria">
+                        <h4>Autoria</h4>
+                        <div class="dados">
+                            <i class="fas fa-user"></i> Aluno: Matheus Henrique Borges Ferreira<br>
+                            <i class="fas fa-graduation-cap"></i> Curso: Sistemas de Informação<br>
+                            <i class="fas fa-users"></i> Turma: Noite
+                        </div>
+                        <div class="redes-sociais">
+                            <br>
+                            <h4>Redes Sociais:</h4>
+                            <a href="https://wa.me/5531986253405" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/qr/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/matheus-ferreira-076043319/" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/MatheusFerreirapucminas" target="_blank"><i
+                                    class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <center>
+                <span><b>MH MOVIES - O MELHOR ENTRETENIMENTO QUANDO O ASSUNTO É FILMES!</b></span>
+            </center>
+        </footer>
+</body>
+
+</html>

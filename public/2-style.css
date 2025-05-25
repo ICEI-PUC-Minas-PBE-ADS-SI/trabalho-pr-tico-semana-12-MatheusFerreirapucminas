@@ -1,0 +1,63 @@
+/* Estrutura */
+* {
+    background-color: black;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav img {
+    width: 300px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+/* Caixa de pesquisa */
+input {
+    text-align: center;
+}
+
+.caixa-pesquisa {
+    padding: 20px;
+}
+
+.caixa-pesquisa input {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 20px;
+    border: 0;
+    background-color: white;
+}
+
+.caixa-pesquisa button {
+    background: 0;
+    color: darkgray;
+    border: 0;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.caixa-pesquisa button:hover {
+    background-color: black;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    clear: both;
+    text-align: center;
+}
+
+.redes-sociais a {
+    padding-right: 7px;
+    font-size: 20px;
+}
+
+/* Organização dos sites de curiosidades */
+.iframe li div a{
+    text-decoration: none;
+    color: white;
+}

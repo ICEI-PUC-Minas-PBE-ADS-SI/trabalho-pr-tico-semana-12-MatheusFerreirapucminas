@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Informações</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Desing da Página - Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Ícones do Rodapé -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Ícones das Redes Sociais -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script src="app.js"></script>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid">
+                <img class="logo" src="images/logo.png">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Filmes
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="comedia.html">Comédia</a></li>
+                                <li><a class="dropdown-item" href="acao.html">Ação</a></li>
+                                <li><a class="dropdown-item" href="terror.html">Terror</a></li>
+                                <li><a class="dropdown-item" href="documentarios.html">Documentários</a></li>
+                                <li><a class="dropdown-item" href="series.html">Séries</a></li>
+                                <li><a class="dropdown-item" href="romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="infantil.html">Infantil</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="caixa-pesquisa">
+                    <input type="text" placeholder="Buscar Filmes...">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="tela">
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get('id'));
+        const container = document.getElementById('tela');
+
+        fetch('http://localhost:3000/filmes')
+            .then(response => response.json())
+            .then(filmes => {
+                const filme = filmes[id - 1];
+
+                if (!filme) {
+                    container.innerHTML = "<p>Filme não encontrado.</p>";
+                    return;
+                }
+
+                container.innerHTML = `
+                <center>
+                    <h1>${filme.nome}</h1>
+                    <p><img src="${filme.imagem}" alt="Imagem do Filme"></p>
+                </center>
+                <p><b>Sinopse:</b> ${filme.descrição}</p>
+                <center>
+                    <br>
+                    <h4>Trailer</h4>
+                    <video width="90%" src="${filme.video}" controls></video><br>
+                </center>
+                <p><b>Deseja opções diferentes? Consulte nossa página individual de cada estilo cinematográfico!!</b></p>
+                <center>
+                    <a href="${filme.link}" target="_blank"><b>${filme.nome_filme}</b></a>
+                </center>`;
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o JSON:', error);
+                container.innerHTML = "<p>Erro ao carregar os dados do filme.</p>";
+            });
+    </script>
+
+</body>
+
+</html>
