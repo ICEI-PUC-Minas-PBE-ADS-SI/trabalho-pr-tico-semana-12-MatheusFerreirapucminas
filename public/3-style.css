@@ -1,0 +1,195 @@
+/* Reset e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Fundo com imagem e gradiente */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black no-repeat center/cover;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logo {
+    width: 350px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* Menu */
+.navbar-brand,
+.nav-link,
+.btn-dark {
+    color: white !important;
+    font-size: 18px;
+}
+
+/* Área principal */
+main {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Login box */
+.login {
+    width: 400px;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+.login h2 {
+    color: white;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.caixa-input {
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.caixa-input label {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.caixa-input input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.caixa-input input:focus~label,
+.caixa-input input:valid~label {
+    font-size: 0.9rem;
+    top: 10px;
+    transform: translateY(-150%);
+    color: #ffdde1;
+}
+
+/* Lembrete e link */
+.esqueceu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #fff;
+}
+
+#remember {
+    accent-color: #ffdde1;
+}
+
+.esqueceu label {
+    display: flex;
+    align-items: center;
+}
+
+.esqueceu label p {
+    margin-left: 8px;
+}
+
+.login a {
+    color: #ffdde1;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Botão */
+button {
+    background-color: #271930;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: #000;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}
+
+/* Link de registro */
+.registrar {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
