@@ -5,10 +5,10 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Matheus Henrique Borges Ferreira
+- Matricula: 881020
+- Proposta de projeto escolhida: Catálogo de Filmes 
+- Breve descrição sobre seu projeto: Projeto criado para a opinião de usuários através do JavaScript.
 
 **Print do testes da API com Postman ou similar**
 
