@@ -127,12 +127,5 @@
       "nome_filme": "VEJA O FILME AQUI"
     }
   ],
-  "favoritos": [
-    {
-      "titulo": "Os Farofeiros 2",
-      "clasificação": "Ótimo",
-      "foto": "images/comedia.jpg",
-      "id": 1
-    }
-  ]
+  "favoritos": []
 }

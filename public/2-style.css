@@ -2,6 +2,7 @@
 * {
     background-color: black;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -10,6 +11,20 @@ header nav img {
     width: 300px;
     padding: 20px;
     border-radius: 30px;
+}
+
+.container-fluid .navbar-brand:hover {
+    color: red;
+}
+
+.iframe li {
+    color: red;
+}
+
+.navbar,
+.navbar-dark,
+.bg-black a:hover {
+    color: red;
 }
 
 /* Caixa de pesquisa */
@@ -57,7 +72,7 @@ footer {
 }
 
 /* Organização dos sites de curiosidades */
-.iframe li div a{
+.iframe li div a {
     text-decoration: none;
     color: white;
 }
